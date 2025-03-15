@@ -146,39 +146,6 @@ form .button input:hover {
   }
 }
 
-
-#role-select {
-    height: 45px;
-    width: 100%;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-bottom-width: 2px;
-    border-radius: 5px;
-    padding-left: 15px;
-    outline: none;
-    cursor: pointer;
-    transition: 0.3s;
-    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%239b59b6' d='M2 0L0 2h4z'/%3E%3C/svg%3E") no-repeat right 10px center;
-    background-size: 10px;
-    appearance: none;
-  }
-  
-  #role-select:focus {
-    border-color: #9b59b6;
-    box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
-  }
-  
-  #role-select:hover {
-    border-color: #71b7e6;
-  }
-  
-  #role-select option {
-    font-size: 16px;
-    color: #333;
-  }
-
-
-
   @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
   margin: 0;
