@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h2>Foydalanuvchilar ro'yxati</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>To'lliq ismi</th>
+                <th>Familiya</th>
+                <th>Lavozimi</th>
+                <th>Faolmi?</th>
+                <th>Adminmi?</th>
+                <th>Amallar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.first_name }}</td>
+                <td>{{ user.last_name }}</td>
+                <td>{{ user.lavozimi }}</td>
+                <td>{{ user.is_active }}</td>
+                <td>{{ user.is_staff }}</td>
+                <td>
+                    <a href="{% url 'edit_user' user.id %}">Tahrirlash</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foydalanuvchini tahrirlash</title>
+</head>
+<body>
+    <h2>Foydalanuvchini tahrirlash</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Username:</label>
+        <input type="text" name="username" value="{{ user.username }}" required><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" value="{{ user.email }}" required><br>
+
+        <label>Ism:</label>
+        <input type="text" name="first_name" value="{{ user.first_name }}"><br>
+
+        <label>Familiya:</label>
+        <input type="text" name="last_name" value="{{ user.last_name }}"><br>
+
+        <label>Lavozimi:</label>
+        <input type="text" name="lavozimi" value="{{ user.lavozimi }}"><br>
+
+        <label>Faolmi?</label>
+        <input type="checkbox" name="is_active" {% if user.is_active %}checked{% endif %}><br>
+
+        <label>Adminmi?</label>
+        <input type="checkbox" name="is_staff" {% if user.is_staff %}checked{% endif %}><br>
+
+        <button type="submit">Saqlash</button>
+    </form>
+</body>
+</html>

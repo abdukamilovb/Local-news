@@ -22,4 +22,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('signup/', views.signup, name='signup'),  # signup sahifasi uchun yo‘l
+    path('signin/', views.signin, name='signin'),
+    path('user/', views.user_page, name="user"),
+    path('logout/', views.user_logout, name="logout"),  # Logout sahifasi
+    path('admin1/', views.custom_admin, name='custom_admin'),
+    path('admin1/edit/<int:user_id>/', views.edit_user, name='edit_user'),
 ]
+
